@@ -69,7 +69,7 @@ export default class SplashScreen extends Component{
       }
   
       loadFriends = () => {
-        fetch("https://randomuser.me/api/?results=5")
+        fetch("https://randomuser.me/api/?results=20")
           .then( res => res.json() )
           .then( res => {
             this.setState({ data: res.results || [] })
@@ -82,13 +82,13 @@ export default class SplashScreen extends Component{
 
         render(){
             return(
-                <FlatList data={this.state.data} renderItem={({item}) => (
+                <FlatList data={this.state.data} style={{}} renderItem={({item}) => (
                     <FadeInView style={friend.friendContainer}>
                        
-                        <Image source={{uri: item.picture.thumbnail}} style={friend.friendImage}/>
+                        <Image source={{uri: item.picture.medium}} style={friend.friendImage}/>
                             <View style={{flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'flex-start'}}>
                             <Text style={friend.friendName}>{item.name.first} {item.name.last}</Text>
-                            <Text style={friend.friendEmail}>{item.email}</Text>
+                            <Text style={friend.friendLocation}>{item.location.state}, {item.location.country}</Text>
                             </View>
                    
                     </FadeInView>

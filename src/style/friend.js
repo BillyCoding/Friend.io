@@ -4,14 +4,19 @@ const global = {
         backgroundColor: '#fafafa',
         paddingHorizontal: 10,
     },
+    Body:{
+        //backgroundColor: 'yellow',
+        height: '100%',
+        paddingVertical: 10
+    },
     friendContainer:{
         display: 'flex',
-        backgroundColor: '#eee',
+        backgroundColor: '#f5f5f5',
         marginVertical: 5,
         paddingVertical: 10,
         paddingHorizontal: 15,
         borderRadius: 10,
-        elevation:1,
+        //elevation:1,
         flexDirection: 'row',
         alignItems: 'flex-start',
     },
@@ -27,9 +32,10 @@ const global = {
         fontWeight: 'bold',
         fontSize: 18
     },
-    friendEmail:{
+    friendLocation:{
         fontWeight: 'italic',
-        color: '#555'
+        color: '#555',
+        fontSize:10
     },
     title:{
         textAlign: 'center',

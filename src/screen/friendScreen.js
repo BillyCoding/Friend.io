@@ -8,6 +8,7 @@ import friend from  '../style/friend';
 
 
 import Button from '../components/Button';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default class homeScreen extends Component{
 
