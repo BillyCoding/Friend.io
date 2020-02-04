@@ -5,7 +5,7 @@ const global = {
         backgroundColor: '#FAFAFA'
     },
     Body:{
-        paddingVertical: 20,
+        paddingTop: 30,
         paddingHorizontal: 10,
         justifyContent: 'center', 
         flex: 1
