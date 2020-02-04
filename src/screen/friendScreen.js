@@ -28,7 +28,6 @@ export default class homeScreen extends Component{
             <View style={friend.Body}> 
                 <Text style={friend.title}>My Friends</Text>
                 <FriendContainer/>
-                
             </View> 
         </SafeAreaView>
       

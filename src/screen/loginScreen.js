@@ -17,7 +17,7 @@ export default class loginScreen extends Component{
 
     entrar = () => {
         Alert.alert("Login", "Bem-Vindo");
-        this.props.navigation.navigate('Friend');
+        this.props.navigation.navigate('friend');
     }
 
 

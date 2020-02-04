@@ -2,7 +2,7 @@ const global = {
     safeArea:{
         flex: 1,
         backgroundColor: '#fafafa',
-        paddingHorizontal: 10
+        paddingHorizontal: 10,
     },
     friendContainer:{
         display: 'flex',
