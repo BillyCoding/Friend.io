@@ -1,8 +1,8 @@
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
-import Login from './src/screen/loginScreen';
-import Friend from './src/screen/friendScreen';
+import Login from '../screen/loginScreen';
+import Friend from '../screen/friendScreen';
 
 
 const MainNavigator = createStackNavigator({

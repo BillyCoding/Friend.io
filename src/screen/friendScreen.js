@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import {SafeAreaView, StatusBar, View} from 'react-native';
+import {SafeAreaView, StatusBar, View, Alert} from 'react-native';
 
 import global from '../style/global';
 
 
 import Button from '../components/Button';
-import Input from '../components/InputText';
 
 export default class homeScreen extends Component{
 
@@ -13,8 +12,8 @@ export default class homeScreen extends Component{
         buttonText: 'Continuar'
     }
 
-    alternar = () => {
-        this.setState({buttonText: this.state.buttonText ? '' : 'Avançar'})
+    voltar = () => {
+        Alert.alert("Sair", "Volte mais tarde!")
     }
 
 
@@ -24,6 +23,8 @@ export default class homeScreen extends Component{
         <SafeAreaView style={global.safeArea}>
           <StatusBar barStyle="dark-content" backgroundColor="#FAFAFA"/>
             <View style={global.Body}>  
+                <Button onPress={this.voltar} texto="Sair"/>
+                
             </View> 
         </SafeAreaView>
       
