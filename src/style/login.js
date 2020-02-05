@@ -5,14 +5,17 @@ const global = {
         backgroundColor: '#6dcffc'
     },
     Body:{
-        //backgroundColor: '#6dcffc',
-        marginTop: 50,
-        paddingHorizontal: 20,
-        justifyContent: 'center', 
+        backgroundColor: '#fafafa',
+        marginTop: 20,
+        paddingHorizontal: 10,
+        paddingVertical: 10,
+        marginHorizontal: '2%',
+        borderRadius: 15,
+        
     },
     image:{
-        width: 100,
-        height: 100,
+        width: 90,
+        height: 90,
         borderRadius: 100,
         alignSelf: 'center',
         marginTop: 50,
@@ -20,27 +23,41 @@ const global = {
     },
     title:{
         
-        textAlign: 'left',
-        //color: 'white',
-        fontWeight: 'bold',
+        textAlign: 'center',
+        color: '#222',
         fontFamily: 'Poppins-Bold',
-        fontSize: 35,
-        marginTop: 20,
+        fontSize: 15,
+        marginTop: 10,
     },
     subtitle:{
         
-        textAlign: 'left',
-        //color: 'white',
-        fontWeight: 'bold',
+        textAlign: 'center',
+        color: '#eee',
         fontFamily: 'Poppins-Bold',
-        fontSize: 16,
-        marginBottom: 30,
-        fontStyle: 'italic',
+        fontSize: 14,
+        marginTop: 5,
     },
 
     check:{
         flexDirection: 'row',
         alignItems: 'center',
+        marginHorizontal: '3%',
+    },
+
+    loginContentOption:{
+        display: 'flex',
+        marginVertical: 1,
+        paddingVertical: 9,
+        paddingHorizontal: 20,
+        borderRadius: 0,
+        flexDirection: 'row',
+        alignItems: 'flex-start',
+        backgroundColor: '#e6e6e6', 
+        borderRadius: 15, 
+        alignItems:'center',
+         paddingVertical: 20, 
+         marginVertical: 5, 
+         marginHorizontal: '1%',
     }
 
 }

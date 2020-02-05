@@ -29,21 +29,21 @@ const global = {
     },
     friendName:{
         color:'black',
-        //backgroundColor: 'yellow',
-        fontWeight: 'bold',
+        fontFamily: 'Poppins-Bold',
         fontSize: 15,
         justifyContent: 'center',
         alignContent: 'center',
     },
     friendLocation:{
-        fontStyle: 'italic',
+        fontFamily: 'Poppins-Italic',
         color: '#555',
         fontSize:10
     },
     title:{
         textAlign: 'center',
         paddingVertical: 10,
-        fontWeight: 'bold',
+        fontFamily: 'Poppins-Bold',
+        width: '80%',
         fontSize: 20,
         color: 'white',
         backgroundColor: '#6dcffc'

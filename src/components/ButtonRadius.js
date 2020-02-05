@@ -13,7 +13,7 @@ export default class Button extends Component{
                                         alignItems: 'center',
                                         alignSelf: 'flex-end',
                                         borderRadius: 100,
-                                        elevation: 0,
+                                        elevation: 4,
                                         marginHorizontal: 5,
                                         marginVertical:10
                                     }}>

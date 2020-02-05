@@ -10,10 +10,9 @@ export default class Button extends Component{
                                         paddingVertical: 15,
                                         paddingHorizontal: 25,
                                         alignItems: 'center',
-                                        borderRadius: 5,
+                                        borderBottomLeftRadius: 15, borderBottomRightRadius: 15,
                                         elevation: 2,
-                                        marginHorizontal: 5,
-                                        marginVertical:5
+                                        marginVertical:5,
                                     }}>
                 <Text style={{color: '#fafafa', fontFamily: 'Poppins-Bold'}}>
                     {this.props.texto}

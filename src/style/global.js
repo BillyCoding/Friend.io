@@ -10,12 +10,17 @@ const global = {
         justifyContent: 'center', 
         flex: 1
     },
+    headScreen:{
+        flexDirection: 'row',
+        paddingRight: '6%',
+        alignItems: 'center',
+    },
     input:{
         backgroundColor: '#EEE',
         paddingHorizontal:20, 
         marginVertical: 10,
-        borderRadius: 5,
-        elevation: 2,
+        borderRadius: 25,
+        elevation: 5,
         marginHorizontal: 5,
         fontFamily: 'Poppins'
     }

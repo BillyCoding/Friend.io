@@ -10,7 +10,7 @@ const FadeInView = props => {
   React.useEffect(() => {
     Animated.timing(fadeAnim, {
       toValue: 1,
-      duration: 1500,
+      duration: 200,
     }).start();
   }, [fadeAnim]);
 
@@ -70,7 +70,7 @@ export default class SplashScreen extends Component{
       }
   
       loadFriends = () => {
-        fetch("https://randomuser.me/api/?results=15")
+        fetch("https://randomuser.me/api/?results=20")
           .then( res => res.json() )
           .then( res => {
             this.setState({ data: res.results || [] })
