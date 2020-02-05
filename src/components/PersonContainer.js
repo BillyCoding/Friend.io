@@ -2,6 +2,7 @@ import React, { Component, useState, useEffect } from 'react';
 import { Text, View, Image, FlatList, Animated,} from 'react-native';
 
 import friend from '../style/friend'
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const FadeInView = props => {
   const [fadeAnim] = useState(new Animated.Value(0)); // Initial value for opacity: 0
@@ -9,7 +10,7 @@ const FadeInView = props => {
   React.useEffect(() => {
     Animated.timing(fadeAnim, {
       toValue: 1,
-      duration: 2500,
+      duration: 1500,
     }).start();
   }, [fadeAnim]);
 
@@ -69,7 +70,7 @@ export default class SplashScreen extends Component{
       }
   
       loadFriends = () => {
-        fetch("https://randomuser.me/api/?results=20")
+        fetch("https://randomuser.me/api/?results=15")
           .then( res => res.json() )
           .then( res => {
             this.setState({ data: res.results || [] })
@@ -82,16 +83,17 @@ export default class SplashScreen extends Component{
 
         render(){
             return(
-                <FlatList data={this.state.data} style={{}} renderItem={({item}) => (
+                <FlatList data={this.state.data} showsVerticalScrollIndicator={true} renderItem={({item}) => (
+                <TouchableOpacity> 
                     <FadeInView style={friend.friendContainer}>
                        
                         <Image source={{uri: item.picture.medium}} style={friend.friendImage}/>
                             <View style={{flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'flex-start'}}>
                             <Text style={friend.friendName}>{item.name.first} {item.name.last}</Text>
-                            <Text style={friend.friendLocation}>{item.location.state}, {item.location.country}</Text>
+                            <Text style={friend.friendLocation}>{item.location.timezone.description}</Text>
                             </View>
                    
-                    </FadeInView>
+                    </FadeInView></TouchableOpacity>  
                     )}  />
         )
     }

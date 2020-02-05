@@ -8,7 +8,7 @@ import friend from  '../style/friend';
 
 
 import Button from '../components/Button';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
 
 export default class homeScreen extends Component{
 
@@ -25,10 +25,19 @@ export default class homeScreen extends Component{
         return(
         
         <SafeAreaView style={friend.safeArea}>
-          <StatusBar barStyle="dark-content" backgroundColor="#fafafa"/>
+          <StatusBar barStyle="light-content" backgroundColor="#5bc4f5"/>
+          
             <View style={friend.Body}> 
                 <Text style={friend.title}>My Friends</Text>
+                <ScrollView>
+                <TouchableOpacity style={friend.friendContainer}>
+                        <Image source={require('../assets/adicionar.png')} style={friend.friendImage}/>
+                            <View style={{height: 40, justifyContent: 'center'}}>
+                                <Text style={friend.friendName}>Adicionar novo</Text>
+                            </View>
+                </TouchableOpacity> 
                 <FriendContainer/>
+                </ScrollView>
             </View> 
         </SafeAreaView>
       

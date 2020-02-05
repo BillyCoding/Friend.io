@@ -2,38 +2,41 @@ const global = {
     safeArea:{
         flex: 1,
         backgroundColor: '#fafafa',
-        paddingHorizontal: 10,
+        paddingHorizontal: 0,
     },
     Body:{
         //backgroundColor: 'yellow',
         height: '100%',
-        paddingVertical: 10
+        paddingVertical: 0
     },
     friendContainer:{
         display: 'flex',
-        backgroundColor: '#f5f5f5',
-        marginVertical: 5,
-        paddingVertical: 10,
-        paddingHorizontal: 15,
-        borderRadius: 10,
+        //backgroundColor: '#addaff',
+        marginVertical: 1,
+        paddingVertical: 9,
+        paddingHorizontal: 20,
+        borderRadius: 0,
         //elevation:1,
         flexDirection: 'row',
         alignItems: 'flex-start',
     },
     friendImage:{
-        width: 50, 
-        height:50, 
+        width: 40, 
+        height:40, 
         borderRadius:100,
         marginRight: 20,
+        
     },
     friendName:{
         color:'black',
         //backgroundColor: 'yellow',
         fontWeight: 'bold',
-        fontSize: 18
+        fontSize: 15,
+        justifyContent: 'center',
+        alignContent: 'center',
     },
     friendLocation:{
-        fontWeight: 'italic',
+        fontStyle: 'italic',
         color: '#555',
         fontSize:10
     },
@@ -42,6 +45,8 @@ const global = {
         paddingVertical: 10,
         fontWeight: 'bold',
         fontSize: 20,
+        color: 'white',
+        backgroundColor: '#6dcffc'
         
     }
 

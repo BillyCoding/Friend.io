@@ -2,28 +2,45 @@ const global = {
 
     safeArea:{
         flex: 1,
-        backgroundColor: '#FAFAFA'
+        backgroundColor: '#6dcffc'
     },
     Body:{
-        //backgroundColor: 'yellow',
-        paddingVertical: 50,
-        paddingHorizontal: 30,
+        //backgroundColor: '#6dcffc',
+        marginTop: 50,
+        paddingHorizontal: 20,
         justifyContent: 'center', 
     },
     image:{
-        width: 150,
-        height: 150,
+        width: 100,
+        height: 100,
         borderRadius: 100,
         alignSelf: 'center',
         marginTop: 50,
         
     },
     title:{
-        textAlign: 'center',
+        
+        textAlign: 'left',
+        //color: 'white',
         fontWeight: 'bold',
         fontFamily: 'Poppins-Bold',
-        fontSize: 20,
-        marginTop: 10,
+        fontSize: 35,
+        marginTop: 20,
+    },
+    subtitle:{
+        
+        textAlign: 'left',
+        //color: 'white',
+        fontWeight: 'bold',
+        fontFamily: 'Poppins-Bold',
+        fontSize: 16,
+        marginBottom: 30,
+        fontStyle: 'italic',
+    },
+
+    check:{
+        flexDirection: 'row',
+        alignItems: 'center',
     }
 
 }

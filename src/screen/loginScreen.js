@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import {SafeAreaView, StatusBar, View, Image, Text, Alert} from 'react-native';
+import {SafeAreaView, StatusBar, View, Image, Text, Alert, CheckBox} from 'react-native';
 
 import global from '../style/global';
 import login from '../style/login';
 
 
-import Button from '../components/Button';
+import ButtonRadius from '../components/ButtonRadius';
 import Input from '../components/InputText';
 import InputPass from '../components/InputPassword';
+import { ScrollView } from 'react-native-gesture-handler';
 
 export default class loginScreen extends Component{
 
@@ -16,7 +17,7 @@ export default class loginScreen extends Component{
     }
 
     entrar = () => {
-        Alert.alert("Login", "Bem-Vindo");
+        //Alert.alert("Login", "Bem-Vindo");
         this.props.navigation.navigate('friend');
     }
 
@@ -24,17 +25,23 @@ export default class loginScreen extends Component{
     render(){
         return(
         
-        <SafeAreaView style={global.safeArea}>
-          <StatusBar barStyle="dark-content" backgroundColor="#FAFAFA"/>
-            <Image source={require('../assets/profile.jpg')} style={login.image}/>
-            <Text style={login.title}>Login</Text> 
+        <SafeAreaView style={login.safeArea}>
+          <StatusBar barStyle="light-content" backgroundColor="#6dcffc"/>
+          <ScrollView showsVerticalScrollIndicator={false}>
+            {/*<Image source={require('../assets/logo.png')} style={login.image}/>*/}
+            
             <View style={login.Body}>  
-                  
+                  <Text style={login.title}>Friend.io</Text> 
+                  <Text style={login.subtitle}>O seu app de conversas</Text> 
                 
                 <Input place='Nome'/>
-                <InputPass place='Senha'/>
-                <Button texto={this.state.buttonText} onPress={this.entrar} />
+                <View style={login.check}>
+                    <CheckBox checked={this.state.checked}/>
+                    <Text>Mantenha-me conectado</Text>
+                </View>
+                <ButtonRadius texto={this.state.buttonText} onPress={this.entrar} />
             </View> 
+            </ScrollView>
         </SafeAreaView>
       
     );

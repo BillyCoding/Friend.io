@@ -9,7 +9,7 @@ export default class Button extends Component{
                                         justifyContent: 'center', 
                                         paddingVertical: 15,
                                         paddingHorizontal: 25,
-                                        alignSelf: 'flex-end',
+                                        alignItems: 'center',
                                         borderRadius: 5,
                                         elevation: 2,
                                         marginHorizontal: 5,
