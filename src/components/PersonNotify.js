@@ -90,7 +90,7 @@ export default class SplashScreen extends Component{
                         <Image source={{uri: item.picture.medium}} style={friend.friendImage}/>
                             <View style={{flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'flex-start'}}>
                             <Text style={friend.friendName}>{item.name.first} {item.name.last}</Text>
-                            <Text style={friend.friendLocation}>{item.location.timezone.description}</Text>
+                            <Text style={friend.friendLocation}>Enviou mensagens</Text>
                             </View>
                    
                     </FadeInView></TouchableOpacity>  

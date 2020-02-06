@@ -41,14 +41,23 @@ const global = {
     },
     title:{
         textAlign: 'center',
-        paddingVertical: 10,
         fontFamily: 'Poppins-Bold',
-        width: '80%',
-        fontSize: 20,
+        fontSize: 18,
         color: 'white',
-        backgroundColor: '#6dcffc'
+        //backgroundColor: '#6dcffc'
         
-    }
+    },
+    head:{
+        backgroundColor: '#5bc4f5',
+        paddingVertical: 20,
+        paddingHorizontal: '3%',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        elevation: 10
+    },
+    headOption:{
+        marginLeft: 10
+    },
 
 }
 

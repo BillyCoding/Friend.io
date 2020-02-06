@@ -20,7 +20,7 @@ export default class loginScreen extends Component{
 
     entrar = () => {
         //Alert.alert("Login", "Bem-Vindo");
-        this.props.navigation.navigate('friend');
+        this.props.navigation.navigate('home');
     }
 
 
@@ -36,7 +36,7 @@ export default class loginScreen extends Component{
                   
                  
                     <UserLogin />
-                    <Buttom texto="Entrar" onPress={this.entrar} />
+                    <Buttom texto="Entrar" back="#222" onPress={this.entrar} />
 
                     <TouchableOpacity style={login.loginContentOption}>
                        

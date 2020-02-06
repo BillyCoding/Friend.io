@@ -5,7 +5,7 @@ export default class Button extends Component{
     render(){
         return(
             <TouchableOpacity onPress={this.props.onPress} style={{
-                                        backgroundColor: '#222', 
+                                        backgroundColor: this.props.back, 
                                         justifyContent: 'center', 
                                         paddingVertical: 15,
                                         paddingHorizontal: 25,

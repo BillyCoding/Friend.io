@@ -19,7 +19,7 @@ export default class homeScreen extends Component{
 
     voltar = () => {
         //Alert.alert("Sair", "Volte mais tarde!")
-        this.props.navigation.navigate('login');
+        this.props.navigation.navigate('home');
     }
 
 
@@ -30,10 +30,17 @@ export default class homeScreen extends Component{
           <StatusBar barStyle="light-content" backgroundColor="#5bc4f5"/>
           
             <View style={friend.Body}>
-                <View style={[global.headScreen, {backgroundColor:'#6dcffc'}]}>
-                    <TouchableOpacity onPress={this.voltar} style={{ paddingHorizontal: 15, paddingVertical: 15,}}><Icon name="arrowleft" color="white" size={25} /></TouchableOpacity>
-                    <Text style={friend.title}>My Friends</Text>
-                </View> 
+                <View style={friend.head}>
+                    <TouchableOpacity onPress={this.voltar} style={[friend.headOptiont, {alignItems: 'flex-start'}]}>  
+                        <Icon name="arrowleft" color="white" size={30} />
+                    </TouchableOpacity>
+                    <Text style={friend.title}>Meus amigos</Text>
+                    <View style={{flexDirection: 'row'}}>
+                    <TouchableOpacity style={friend.headOption}>
+                        <Icon name="search1" color="white" size={30} />
+                    </TouchableOpacity></View>
+                    
+                </View>   
                 <ScrollView>
                 <TouchableOpacity style={friend.friendContainer}>
                         <Image source={require('../assets/adicionar.png')} style={friend.friendImage}/>
@@ -41,7 +48,7 @@ export default class homeScreen extends Component{
                                 <Text style={friend.friendName}>Adicionar novo</Text>
                             </View>
                 </TouchableOpacity> 
-                <FriendContainer/>
+                <FriendContainer number={20}/>
                 </ScrollView>
             </View> 
         </SafeAreaView>

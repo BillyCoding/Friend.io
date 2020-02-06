@@ -3,11 +3,12 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 import Login from './src/screen/loginScreen';
 import Friend from './src/screen/friendScreen';
-
+import Home from './src/screen/homeScreen';
 
 const MainNavigator = createStackNavigator({
   login: Login,
-  friend: Friend
+  friend: Friend,
+  home: Home
 },
   {
     headerMode: 'none'
