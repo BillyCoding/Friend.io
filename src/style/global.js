@@ -13,7 +13,7 @@ const global = {
     headScreen:{
         flexDirection: 'row',
         paddingRight: '6%',
-        alignItems: 'center',
+        
     },
     input:{
         backgroundColor: '#EEE',
@@ -23,7 +23,24 @@ const global = {
         elevation: 5,
         marginHorizontal: 5,
         fontFamily: 'Poppins'
-    }
+    },
+    head:{
+        backgroundColor: '#5bc4f5',
+        paddingVertical: 15,
+        paddingHorizontal: '3%',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        elevation: 10
+    },
+    headTitle:{
+        flexDirection:"row"
+    },
+    headOption:{
+        //backgroundColor: 'cyan',
+        marginVertical: 0,
+        marginLeft: 10,
+    },
+
 
 }
 

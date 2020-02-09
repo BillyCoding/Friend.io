@@ -13,12 +13,11 @@ const global = {
         display: 'flex',
         //backgroundColor: '#addaff',
         marginVertical: 1,
-        paddingVertical: 9,
+        paddingVertical:10,
         paddingHorizontal: 20,
         borderRadius: 0,
         //elevation:1,
         flexDirection: 'row',
-        alignItems: 'flex-start',
     },
     friendImage:{
         width: 40, 
@@ -42,22 +41,21 @@ const global = {
     title:{
         textAlign: 'center',
         fontFamily: 'Poppins-Bold',
-        fontSize: 16,
+        fontSize: 14,
         color: 'white',
+        marginLeft: 30,
         //backgroundColor: '#444'
         
     },
-    head:{
+    
+    friendOptions:{
         backgroundColor: '#5bc4f5',
-        paddingVertical: 15,
-        paddingHorizontal: '3%',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        elevation: 10
-    },
-    headOption:{
-        marginLeft: 10,
-    },
+        width: 40, 
+        height:40, 
+        borderRadius:100,
+        marginRight: 20,
+        alignItems: 'center', justifyContent: 'center'
+    }
 
 }
 

@@ -32,11 +32,14 @@ export default class homeScreen extends Component{
           <StatusBar barStyle="light-content" backgroundColor="#5bc4f5"/>
           
             <View style={friend.Body}>
-                <View style={[friend.head]}>
-                    <TouchableOpacity onPress={this.voltar} style={[friend.headOption, {alignItems: 'flex-start', marginLeft:10}]}>  
-                        <Icon name="arrowleft" color="white" size={25} />
-                    </TouchableOpacity>
-                    <Text style={friend.title}>Arquived</Text>
+                <View style={[global.head]}>
+                    <View style={global.headTitle}>
+                        <TouchableOpacity onPress={this.voltar} style={[global.headOption, {alignItems: 'flex-start', marginLeft:10}]}>  
+                            <Icon name="arrowleft" color="white" size={25} />
+                        </TouchableOpacity>
+                        <Text style={friend.title}>Arquived</Text>
+                    </View>  
+
                     <View style={{flexDirection: 'row'}}>
                     <OptionsButton style={friend.headOption} opcoes={["Ações"]} acoes={[this.voltar]} />
                     

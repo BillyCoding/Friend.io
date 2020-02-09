@@ -9,11 +9,11 @@ export default class optionButton extends Component{
     render(){
         return(
 
-        <View style={{marginLeft: 20}}>
+        <View style={{margin: 0, marginLeft: 20, marginRight: '2%'}}>
         <OptionsMenu
             customButton={Icone}
             destructiveIndex={1}
-            buttonStyle={{ width: 20, height: 8, margin: 2, resizeMode: "contain" }}
+            buttonStyle={{ width: 20, height:20, margin: 2, resizeMode: "contain" }}
             options={this.props.opcoes}
             actions={this.props.acoes}/></View>
     )}

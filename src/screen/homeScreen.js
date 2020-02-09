@@ -8,6 +8,7 @@ import friend from '../style/friend';
 import FriendContainer from '../components/PersonContainer';
 import PersonNotify from '../components/PersonNotify';
 import OptionsButton from '../components/optionButton';
+import Floating from '../components/ButtonFloat';
 
 import Icon from 'react-native-vector-icons/AntDesign';
 
@@ -38,7 +39,7 @@ export default class loginScreen extends Component{
     }
 
     emBreve = () => {
-        Alert.alert("Options Menu", "Em breve");
+        Alert.alert("Friend.io", "Coming soon...");
     }
 
 
@@ -48,42 +49,33 @@ export default class loginScreen extends Component{
         <SafeAreaView style={home.safeArea}>
           <StatusBar barStyle="light-content" backgroundColor="#5bc4f5"/>
           
-            <View style={home.head}>
-                <TouchableOpacity onPress={this.sair} style={[home.headOption, {alignItems: 'flex-start', marginLeft: 10}]}>  
-                    <Icon name="arrowleft" color="white" size={25} />
-                </TouchableOpacity>
-                <Text style={friend.title}>Home</Text>
+            <View style={global.head}>
+                <Text style={[friend.title, {marginLeft: 10}]}>Conversas</Text>
                 <View style={{flexDirection: 'row'}}>
-                
-                <OptionsButton style={friend.headOption} opcoes={[ "Friends","Search", "Arquived","Settings"]} acoes={[ this.AllFriends,this.emBreve,this.ArquiveFriends,this.emBreve]} />
+                <TouchableOpacity onPress={this.emBreve}><Icon name="search1" color="white" size={20} /></TouchableOpacity>
+                <OptionsButton style={global.headOption} opcoes={[ "Friends", "Arquived","Settings", "Exit"]} acoes={[ this.AllFriends,this.ArquiveFriends,this.emBreve, this.sair]} />
                 
             </View>
                 
             </View>  
+            
             <ScrollView showsVerticalScrollIndicator={false}>
-            <View style={[home.Body, {marginTop:20}]}>
-                <View style={home.titleContent}><Text style={home.title}>Notificações</Text></View>
+            <View style={[home.Body]}>
+               
                         <View style={home.recentsContent}>
                         <PersonNotify number={4}/></View>  
-                        <Buttom texto="Ver todas..." back="darkblue" />
 
                 </View> 
                 <View style={home.Body}>
-                <View style={home.titleContent}><Text style={home.title}>Conversas recentes</Text></View>
-                        <View style={home.recentsContent}>
-                        <FriendContainer number={5}/></View>  
-                        <Buttom texto="Todos os amigos" back="#222" onPress={this.AllFriends} />
+                    <View style={home.recentsContent}>
+                        <FriendContainer number={7}/></View>  
 
                 </View> 
 
-                <View style={home.Body}>
-                <View style={home.titleContent}><Text style={home.title}>Conversas antigas</Text></View>
-                        <View style={home.recentsContent}>
-                        <FriendContainer number={3}/></View>  
-                        <Buttom texto="Arquivar" back="orange" />
-
-                </View> 
+                
             </ScrollView>
+            <Floating name="message1" onPress={this.AllFriends} />
+            
         </SafeAreaView>
       
     );

@@ -33,7 +33,7 @@ class ImageLoader extends Component {
   onLoad = () => {
     Animated.timing(this.state.opacity, {
       toValue: 1,
-      duration: 1000,
+      duration: 500,
       useNativeDriver: true,
     }).start();
   };
@@ -94,7 +94,7 @@ export default class SplashScreen extends Component{
                     <FadeInView style={friend.friendContainer}>
                        
                         <Image source={{uri: item.picture.medium}} style={friend.friendImage}/>
-                            <View style={{flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'flex-start'}}>
+                            <View style={{flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'flex-start', width: '80%'}}>
                             <Text style={friend.friendName}>{item.name.first} {item.name.last}</Text>
                             <Text style={friend.friendLocation}>{item.location.timezone.description}</Text>
                             </View>

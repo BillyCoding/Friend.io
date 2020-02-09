@@ -6,22 +6,11 @@ const global = {
     },
     Body:{
         //backgroundColor: '#6dcffc',
-        marginHorizontal: '2%',
+        marginHorizontal: '0%',
         borderRadius: 15,
-        marginVertical:5,
         
     },
-    head:{
-        backgroundColor: '#5bc4f5',
-        paddingVertical: 20,
-        paddingHorizontal: '3%',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        elevation: 10,
-    },
-    headOption:{
-        marginLeft: 20
-    },
+    
     image:{
         width: 35,
         height: 35,

@@ -15,7 +15,7 @@ export default class homeScreen extends Component{
 
     state={
         buttonText: 'Continuar',
-        numberFriends: Math.floor(Math.random() * 14) + 5
+        numberFriends: Math.floor(Math.random() * 10) + 10
     }
 
     voltar = () => {
@@ -31,11 +31,16 @@ export default class homeScreen extends Component{
           <StatusBar barStyle="light-content" backgroundColor="#5bc4f5"/>
           
             <View style={friend.Body}>
-                <View style={friend.head}>
-                    <TouchableOpacity onPress={this.voltar} style={[friend.headOption, {alignItems: 'flex-start', marginLeft:10}]}>  
-                        <Icon name="arrowleft" color="white" size={25} />
-                    </TouchableOpacity>
-                    <Text style={friend.title}>My Friends</Text>
+                <View style={global.head}>
+                    <View style={global.headTitle}>
+                        <TouchableOpacity onPress={this.voltar} style={[global.headOption, {alignItems: 'flex-start', marginLeft:10}]}>  
+                            <Icon name="arrowleft" color="white" size={25} />
+                        </TouchableOpacity>
+                        <View>
+                            <Text style={friend.title}>My Friends</Text>
+                            <Text style={{color: 'white', fontSize:10, fontFamily: 'Poppins-Medium',marginTop: -5, marginLeft: 30}}>{this.state.numberFriends} friends</Text>
+                        </View>
+                    </View>
                      <View style={{flexDirection: 'row'}}>
                     <TouchableOpacity style={friend.headOption}>
                         <Icon name="search1" color="white" size={25} />
@@ -44,14 +49,26 @@ export default class homeScreen extends Component{
                 </View>   
                 <ScrollView>
                 <TouchableOpacity style={friend.friendContainer}>
-                        <Image source={require('../assets/adicionar.png')} style={friend.friendImage}/>
+                <View style={friend.friendOptions}><Icon name="plus" color="white" size={25}  /></View>
                             <View style={{height: 40, justifyContent: 'center'}}>
-                                <Text style={friend.friendName}>Adicionar novo</Text>
-                                <Text style={{color: 'black', fontSize:10, fontFamily: 'Poppins-Medium'}}>{this.state.numberFriends} friends</Text>
-                                
+                                <Text style={friend.friendName}>Add friend</Text> 
                             </View>
                 </TouchableOpacity> 
+
                 <FriendContainer number={this.state.numberFriends}/>
+
+                <TouchableOpacity style={friend.friendContainer}>
+                <View style={[friend.friendOptions, {backgroundColor: '#aaa'}]}><Icon name="sharealt" color="white" size={20}  /></View>
+                            <View style={{height: 40, justifyContent: 'center'}}>
+                                <Text style={friend.friendName}>Invite friends</Text> 
+                            </View>
+                </TouchableOpacity> 
+                <TouchableOpacity style={friend.friendContainer}>
+                <View style={[friend.friendOptions, {backgroundColor: '#aaa'}]}><Icon name="questioncircleo" color="white" size={20}  /></View>
+                            <View style={{height: 40, justifyContent: 'center'}}>
+                                <Text style={friend.friendName}>Help</Text> 
+                            </View>
+                </TouchableOpacity> 
                 </ScrollView>
             </View> 
         </SafeAreaView>

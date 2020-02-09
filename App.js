@@ -48,10 +48,10 @@ function MyTabs() {
 }*/
 
 const MainNavigator = createStackNavigator({
+  home: Home,
   login: Login,
   friend: Friend,
   arquiveFriend: ArquiveFriend,
-  home: Home,
   friendProfile: FriendProfile,
   personContainer: PersonContainer
 },
