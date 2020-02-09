@@ -7,6 +7,7 @@ import Simple from 'react-native-vector-icons/SimpleLineIcons';
 
 import global from '../style/global';
 import friend from  '../style/friend';
+import OptionsButton from '../components/optionButton';
 
 
 import Button from '../components/Button';
@@ -35,11 +36,11 @@ export default class homeScreen extends Component{
                     <TouchableOpacity onPress={this.voltar} style={[friend.headOption, {alignItems: 'flex-start', marginLeft:10}]}>  
                         <Icon name="arrowleft" color="white" size={25} />
                     </TouchableOpacity>
-                    <Text style={friend.title}>Conversas arquivadas</Text>
+                    <Text style={friend.title}>Arquived</Text>
                     <View style={{flexDirection: 'row'}}>
-                    <TouchableOpacity style={friend.headOption}>
-                        <Simple name="options-vertical" color="white" size={20} />
-                    </TouchableOpacity></View>
+                    <OptionsButton style={friend.headOption} opcoes={["Ações"]} acoes={[this.voltar]} />
+                    
+                </View>
                     
                 </View>   
                 <ScrollView>

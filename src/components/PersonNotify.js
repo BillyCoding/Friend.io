@@ -84,14 +84,17 @@ export default class SplashScreen extends Component{
         render(){
             return(
                 <FlatList data={this.state.data} showsVerticalScrollIndicator={true} renderItem={({item}) => (
-                <TouchableOpacity> 
+                <TouchableOpacity onPress={this.GenerateRandomNumber}> 
                     <FadeInView style={friend.friendContainer}>
-                       
                         <Image source={{uri: item.picture.medium}} style={friend.friendImage}/>
-                            <View style={{flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'flex-start'}}>
+                            <View style={{flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'flex-start', width: '72%'}}>
                             <Text style={friend.friendName}>{item.name.first} {item.name.last}</Text>
                             <Text style={friend.friendLocation}>Enviou mensagens</Text>
+                            
                             </View>
+                      <View style={{width: 25, height: 25,padding:3, backgroundColor: '#5bc4f5', borderRadius: 100, alignSelf:'center', alignItems: 'center', justifyContent: 'center'}}>
+                        <Text style={{color: 'white', fontFamily: 'Poppins-Bold', fontSize: 9}}>{Math.floor(Math.random() * 10) + 2}</Text>
+                      </View>
                    
                     </FadeInView></TouchableOpacity>  
                     )}  />

@@ -14,7 +14,8 @@ import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
 export default class homeScreen extends Component{
 
     state={
-        buttonText: 'Continuar'
+        buttonText: 'Continuar',
+        numberFriends: Math.floor(Math.random() * 14) + 5
     }
 
     voltar = () => {
@@ -34,8 +35,8 @@ export default class homeScreen extends Component{
                     <TouchableOpacity onPress={this.voltar} style={[friend.headOption, {alignItems: 'flex-start', marginLeft:10}]}>  
                         <Icon name="arrowleft" color="white" size={25} />
                     </TouchableOpacity>
-                    <Text style={friend.title}>Meus amigos</Text>
-                    <View style={{flexDirection: 'row'}}>
+                    <Text style={friend.title}>My Friends</Text>
+                     <View style={{flexDirection: 'row'}}>
                     <TouchableOpacity style={friend.headOption}>
                         <Icon name="search1" color="white" size={25} />
                     </TouchableOpacity></View>
@@ -46,9 +47,11 @@ export default class homeScreen extends Component{
                         <Image source={require('../assets/adicionar.png')} style={friend.friendImage}/>
                             <View style={{height: 40, justifyContent: 'center'}}>
                                 <Text style={friend.friendName}>Adicionar novo</Text>
+                                <Text style={{color: 'black', fontSize:10, fontFamily: 'Poppins-Medium'}}>{this.state.numberFriends} friends</Text>
+                                
                             </View>
                 </TouchableOpacity> 
-                <FriendContainer number={20}/>
+                <FriendContainer number={this.state.numberFriends}/>
                 </ScrollView>
             </View> 
         </SafeAreaView>

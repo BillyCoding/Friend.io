@@ -7,6 +7,7 @@ import friend from '../style/friend';
 
 import FriendContainer from '../components/PersonContainer';
 import PersonNotify from '../components/PersonNotify';
+import OptionsButton from '../components/optionButton';
 
 import Icon from 'react-native-vector-icons/AntDesign';
 
@@ -14,6 +15,8 @@ import Icon from 'react-native-vector-icons/AntDesign';
 import Buttom from '../components/Button';
 import UserLogin from '../components/UserLogin';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
+
+
 
 export default class loginScreen extends Component{
 
@@ -34,6 +37,10 @@ export default class loginScreen extends Component{
         this.props.navigation.navigate('login');
     }
 
+    emBreve = () => {
+        Alert.alert("Options Menu", "Em breve");
+    }
+
 
     render(){
         return(
@@ -45,16 +52,12 @@ export default class loginScreen extends Component{
                 <TouchableOpacity onPress={this.sair} style={[home.headOption, {alignItems: 'flex-start', marginLeft: 10}]}>  
                     <Icon name="arrowleft" color="white" size={25} />
                 </TouchableOpacity>
+                <Text style={friend.title}>Home</Text>
                 <View style={{flexDirection: 'row'}}>
-                <TouchableOpacity style={home.headOption} onPress={this.ArquiveFriends} >
-                    <Icon name="inbox" color="white" size={25}/>
-                </TouchableOpacity>
-                <TouchableOpacity style={home.headOption}  onPress={this.AllFriends}>
-                    <Icon name="message1" color="white" size={25} />
-                </TouchableOpacity>
-                <TouchableOpacity style={home.headOption}>
-                    <Icon name="setting" color="white" size={25} />
-                </TouchableOpacity></View>
+                
+                <OptionsButton style={friend.headOption} opcoes={[ "Friends","Search", "Arquived","Settings"]} acoes={[ this.AllFriends,this.emBreve,this.ArquiveFriends,this.emBreve]} />
+                
+            </View>
                 
             </View>  
             <ScrollView showsVerticalScrollIndicator={false}>
