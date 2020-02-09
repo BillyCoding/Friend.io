@@ -1,5 +1,5 @@
 import React, { Component, useState, useEffect } from 'react';
-import { Text, View, Image, FlatList, Animated,} from 'react-native';
+import { Text, View, Image, FlatList, Animated, Alert} from 'react-native';
 
 import friend from '../style/friend'
 import { TouchableOpacity } from 'react-native-gesture-handler';
@@ -62,11 +62,12 @@ class ImageLoader extends Component {
 }
 
 export default class SplashScreen extends Component{
-    constructor(props){
+  constructor(props){
         super(props);
         this.state = {
             data: [],
         }
+        
       }
   
       loadFriends = () => {
@@ -79,6 +80,11 @@ export default class SplashScreen extends Component{
   
       componentDidMount(){
         this.loadFriends();
+      }
+
+      
+     profile = () => { 
+       //this.props.navigation.navigate('friendProfile')
       }
 
         render(){

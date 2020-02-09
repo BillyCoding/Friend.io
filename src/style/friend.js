@@ -42,21 +42,21 @@ const global = {
     title:{
         textAlign: 'center',
         fontFamily: 'Poppins-Bold',
-        fontSize: 18,
+        fontSize: 16,
         color: 'white',
-        //backgroundColor: '#6dcffc'
+        //backgroundColor: '#444'
         
     },
     head:{
         backgroundColor: '#5bc4f5',
-        paddingVertical: 20,
+        paddingVertical: 15,
         paddingHorizontal: '3%',
         flexDirection: 'row',
         justifyContent: 'space-between',
         elevation: 10
     },
     headOption:{
-        marginLeft: 10
+        marginLeft: 10,
     },
 
 }

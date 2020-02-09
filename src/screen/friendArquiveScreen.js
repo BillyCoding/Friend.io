@@ -3,6 +3,7 @@ import {SafeAreaView, StatusBar, View, Alert,Text, Image, FlatList} from 'react-
 
 import FriendContainer from '../components/PersonContainer';
 import Icon from 'react-native-vector-icons/AntDesign';
+import Simple from 'react-native-vector-icons/SimpleLineIcons';
 
 import global from '../style/global';
 import friend from  '../style/friend';
@@ -30,25 +31,20 @@ export default class homeScreen extends Component{
           <StatusBar barStyle="light-content" backgroundColor="#5bc4f5"/>
           
             <View style={friend.Body}>
-                <View style={friend.head}>
+                <View style={[friend.head]}>
                     <TouchableOpacity onPress={this.voltar} style={[friend.headOption, {alignItems: 'flex-start', marginLeft:10}]}>  
                         <Icon name="arrowleft" color="white" size={25} />
                     </TouchableOpacity>
-                    <Text style={friend.title}>Meus amigos</Text>
+                    <Text style={friend.title}>Conversas arquivadas</Text>
                     <View style={{flexDirection: 'row'}}>
                     <TouchableOpacity style={friend.headOption}>
-                        <Icon name="search1" color="white" size={25} />
+                        <Simple name="options-vertical" color="white" size={20} />
                     </TouchableOpacity></View>
                     
                 </View>   
                 <ScrollView>
-                <TouchableOpacity style={friend.friendContainer}>
-                        <Image source={require('../assets/adicionar.png')} style={friend.friendImage}/>
-                            <View style={{height: 40, justifyContent: 'center'}}>
-                                <Text style={friend.friendName}>Adicionar novo</Text>
-                            </View>
-                </TouchableOpacity> 
-                <FriendContainer number={20}/>
+                
+                <FriendContainer number={6}/>
                 </ScrollView>
             </View> 
         </SafeAreaView>

@@ -6,7 +6,7 @@ const global = {
     },
     Body:{
         //backgroundColor: '#6dcffc',
-        marginHorizontal: '3%',
+        marginHorizontal: '2%',
         borderRadius: 15,
         marginVertical:5,
         
@@ -20,7 +20,7 @@ const global = {
         elevation: 10,
     },
     headOption:{
-        marginLeft: 10
+        marginLeft: 20
     },
     image:{
         width: 35,
@@ -76,6 +76,9 @@ const global = {
         paddingHorizontal: 25,
         alignItems: 'flex-start',
         elevation: 2,
+    },
+    title:{
+        color: '#fafafa', fontFamily: 'Poppins-Bold', fontSize:15
     },
     recentsContent:{
         //height: 420, 
